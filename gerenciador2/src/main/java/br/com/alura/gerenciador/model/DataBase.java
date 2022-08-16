@@ -69,4 +69,8 @@ public class DataBase {
     public Company findId(Integer id) {
         return DataBase.companies.stream().filter(company -> id.equals(company.getId())).findAny().orElse(null);
     }
+
+    public User existAuth(String login, String password) {
+        return DataBase.users.stream().filter(user -> user.isEqual(login, password)).findAny().orElse(null);
+    }
 }

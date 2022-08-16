@@ -13,28 +13,37 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Java Standard Taglib</title>
+    <style>
+        <%@ include file="css/style.css" %>
+    </style>
 </head>
 <body>
-<ul>
-    <h1>Company List</h1>
-
-    <c:if test="${ not empty companyName}">
-        <h1 class="title">
-            Company <span class="name not-empty">${companyName}</span> registered with success!
-        </h1>
+<div class="container">
+    <c:if test="${not empty userLogged}">
+        <h1 class="userLogged">${userLogged.login}</h1>
     </c:if>
 
     <ul>
-        <c:forEach items="${companies}" var="company">
-            <li>
-                <span>${company.name} - <fmt:formatDate value="${company.date}" pattern="dd/MM/yyyy"/></span>
-                <a href="${routeCompanyForm}?action=company-form">new</a>
-                <a href="${routeCompanyUpdate}?action=company-update&id=${company.id}">update</a>
-                <a href="${routeCompanyRemove}?action=company-remove&id=${company.id}">remove</a>
-            </li>
-        </c:forEach>
-    </ul>
+        <h1>Company List</h1>
 
-</ul>
+        <c:if test="${ not empty companyName}">
+            <h1 class="title">
+                Company <span class="name not-empty">${companyName}</span> registered with success!
+            </h1>
+        </c:if>
+
+        <ul>
+            <c:forEach items="${companies}" var="company">
+                <li>
+                    <span>${company.name} - <fmt:formatDate value="${company.date}" pattern="dd/MM/yyyy"/></span>
+                    <a href="${routeCompanyForm}?action=company-form">new</a>
+                    <a href="${routeCompanyUpdate}?action=company-update&id=${company.id}">update</a>
+                    <a href="${routeCompanyRemove}?action=company-remove&id=${company.id}">remove</a>
+                </li>
+            </c:forEach>
+        </ul>
+
+    </ul>
+</div>
 </body>
 </html>

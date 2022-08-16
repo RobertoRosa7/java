@@ -9,6 +9,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Form update Company</title>
+    <style><%@ include file="css/style.css" %></style>
 </head>
 <body>
 

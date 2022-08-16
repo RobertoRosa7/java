@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Form new Company</title>
+    <style><%@ include file="css/style.css" %></style>
 </head>
 <body>
 
