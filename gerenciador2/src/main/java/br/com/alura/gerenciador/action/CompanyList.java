@@ -4,9 +4,10 @@ import br.com.alura.gerenciador.model.Company;
 import br.com.alura.gerenciador.model.DataBase;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
-public class CompanyList implements Action{
+public class CompanyList implements Action {
 
     public String execution(HttpServletRequest request) {
         DataBase database = new DataBase();

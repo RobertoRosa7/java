@@ -4,6 +4,7 @@ import br.com.alura.gerenciador.model.DataBase;
 import br.com.alura.gerenciador.model.User;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 public class CompanyLogin implements Action {
 
@@ -19,7 +20,8 @@ public class CompanyLogin implements Action {
             return "redirect:entrance?action=company-login-form";
         }
 
-        request.setAttribute("userLogged", user);
+        HttpSession session = request.getSession();
+        session.setAttribute("userLogged", user);
         return "redirect:entrance?action=company-list";
     }
 }

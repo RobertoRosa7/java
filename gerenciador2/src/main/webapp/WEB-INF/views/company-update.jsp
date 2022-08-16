@@ -9,10 +9,12 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Form update Company</title>
-    <style><%@ include file="css/style.css" %></style>
+    <style>
+        <%@ include file="css/style.css" %>
+    </style>
 </head>
 <body>
-
+<c:import url="components/toolbar.jsp"/>
 <div class="container">
     <h1 class="title">Update company</h1>
     <form action="${routeCompanyChange}" method="post">

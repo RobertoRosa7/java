@@ -9,7 +9,7 @@
     <style><%@ include file="css/style.css" %></style>
 </head>
 <body>
-
+<c:import url="components/toolbar.jsp"/>
 <div class="container">
     <h1 class="title">Register new company</h1>
     <form action="${routeCompanyNew}" method="post">

@@ -8,16 +8,31 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 @WebServlet(name = "Entrance", value = "/entrance")
 public class Entrance extends HttpServlet {
+    private boolean isProtected = false;
+
+    private boolean userNotLogged(HttpSession session) {
+        return session.getAttribute("userLogged") == null && this.isProtected;
+    }
+
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
         String paramAction = request.getParameter("action");
+        this.isProtected = !(paramAction.equals("company-login") || paramAction.equals("company-login-form"));
+
+        if (this.userNotLogged(session)) {
+            this.routerRedirect(response, "redirect:entrance?action=company-login-form");
+            return;
+        }
+
         String routeName = "";
         String nameClass = "br.com.alura.gerenciador.action." + this.formatParamsString(paramAction);
 
@@ -52,9 +67,7 @@ public class Entrance extends HttpServlet {
 
     private String formatParamsString(String params) {
         String[] textList = params.split("-");
-        return Arrays.stream(textList)
-                .map((text) -> text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase())
-                .collect(Collectors.joining(""));
+        return Arrays.stream(textList).map((text) -> text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase()).collect(Collectors.joining(""));
     }
 
 }

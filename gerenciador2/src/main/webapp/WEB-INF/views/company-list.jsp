@@ -4,9 +4,7 @@
 <%@ page pageEncoding="utf-8" contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<c:url value="/entrance" var="routeCompanyRemove"/>
-<c:url value="/entrance" var="routeCompanyUpdate"/>
-<c:url value="/entrance" var="routeCompanyForm"/>
+<c:url value="/entrance" var="routeCompanyEntrance"/>
 
 <!doctype html>
 <html lang="en">
@@ -18,32 +16,34 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <c:if test="${not empty userLogged}">
-        <h1 class="userLogged">${userLogged.login}</h1>
-    </c:if>
+<c:import url="components/toolbar.jsp"/>
+<main class="container">
+    <section>
+        <article>
+            <ul>
+                <h1>Company List</h1>
 
-    <ul>
-        <h1>Company List</h1>
+                <c:if test="${ not empty companyName}">
+                    <h1 class="title">
+                        Company <span class="name not-empty">${companyName}</span> registered with success!
+                    </h1>
+                </c:if>
 
-        <c:if test="${ not empty companyName}">
-            <h1 class="title">
-                Company <span class="name not-empty">${companyName}</span> registered with success!
-            </h1>
-        </c:if>
+                <ul>
+                    <c:forEach items="${companies}" var="company">
+                        <li>
+                            <span>${company.name} - <fmt:formatDate value="${company.date}"
+                                                                    pattern="dd/MM/yyyy"/></span>
+                            <a href="${routeCompanyEntrance}?action=company-form">new</a>
+                            <a href="${routeCompanyEntrance}?action=company-update&id=${company.id}">update</a>
+                            <a href="${routeCompanyEntrance}?action=company-remove&id=${company.id}">remove</a>
+                        </li>
+                    </c:forEach>
+                </ul>
 
-        <ul>
-            <c:forEach items="${companies}" var="company">
-                <li>
-                    <span>${company.name} - <fmt:formatDate value="${company.date}" pattern="dd/MM/yyyy"/></span>
-                    <a href="${routeCompanyForm}?action=company-form">new</a>
-                    <a href="${routeCompanyUpdate}?action=company-update&id=${company.id}">update</a>
-                    <a href="${routeCompanyRemove}?action=company-remove&id=${company.id}">remove</a>
-                </li>
-            </c:forEach>
-        </ul>
-
-    </ul>
-</div>
+            </ul>
+        </article>
+    </section>
+</main>
 </body>
 </html>
