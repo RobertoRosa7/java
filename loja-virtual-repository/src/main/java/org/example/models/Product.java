@@ -5,6 +5,11 @@ public class Product {
     private String name;
     private String description;
 
+    public Product(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public Product(Integer id, String name, String description) {
         this.id = id;
         this.name = name;
@@ -33,5 +38,10 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("O produto criado foi: %d, %s, %s", this.id, this.name, this.description);
     }
 }
