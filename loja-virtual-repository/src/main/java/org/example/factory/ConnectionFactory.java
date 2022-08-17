@@ -1,4 +1,4 @@
-package org.example;
+package org.example.factory;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 

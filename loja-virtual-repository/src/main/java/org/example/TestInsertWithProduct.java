@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.DAO.ProductDAO;
+import org.example.factory.ConnectionFactory;
 import org.example.models.Product;
 
 import java.sql.Connection;

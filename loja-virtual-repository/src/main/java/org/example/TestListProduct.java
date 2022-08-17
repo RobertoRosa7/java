@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.factory.ConnectionFactory;
 import org.example.models.Product;
 
 import java.sql.Connection;
@@ -8,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class TestList {
+public class TestListProduct {
 
     private static final String query = "select id, name, description from produto";
     private static List<Product> products;
