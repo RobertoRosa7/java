@@ -18,7 +18,16 @@ public class ProductNew {
 //        findById(id);
 //        findAll();
 //        findByName("Xiaomi Redmi");
-        findByCategory("Mobile");
+//        findByCategory("Mobile");
+        getPriceProductByName("Xiaomi Redmi");
+    }
+
+    private static void getPriceProductByName(String name) {
+        EntityManager em = Utils.getEntityManager();
+        ProductDAO pd = new ProductDAO(em);
+
+        BigDecimal price = pd.getPriceProductByName(name);
+        System.out.println(price);
     }
 
     private static void findByCategory(String name) {

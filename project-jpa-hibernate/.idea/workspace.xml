@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb590bc-8eec-45d8-bbfb-c1340010c893" name="Changes" comment="project jpa hibernate - create table and insert product">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/dao/CategoryDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/dao/ProductDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/utils/Utils.java" afterDir="false" />
+    <list default="true" id="9eb590bc-8eec-45d8-bbfb-c1340010c893" name="Changes" comment="project jpa hibernate - crud">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/dao/ProductDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/tests/ProductNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/tests/ProductNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alura/loja/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alura/loja/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alura/loja/tests/ProductNew.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alura/loja/tests/ProductNew.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660744189878</updated>
-      <workItem from="1660744191080" duration="11092000" />
+      <workItem from="1660744191080" duration="11473000" />
     </task>
     <task id="LOCAL-00001" summary="project jpa hibernate - file persistence added">
       <created>1660745884283</created>
@@ -84,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660752962887</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="project jpa hibernate - crud">
+      <created>1660759035006</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660759035006</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +109,7 @@
     <MESSAGE value="project jpa hibernate - apply dependencies" />
     <MESSAGE value="project jpa hibernate - file persistence added" />
     <MESSAGE value="project jpa hibernate - create table and insert product" />
-    <option name="LAST_COMMIT_MESSAGE" value="project jpa hibernate - create table and insert product" />
+    <MESSAGE value="project jpa hibernate - crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="project jpa hibernate - crud" />
   </component>
 </project>
