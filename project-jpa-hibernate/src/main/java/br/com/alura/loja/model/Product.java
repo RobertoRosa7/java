@@ -2,6 +2,7 @@ package br.com.alura.loja.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity // => indicate that it is a database table
 @Table(name = "products") // => indicate that is a plural
@@ -14,6 +15,40 @@ public class Product {
     //    @Column(name = "description") // => if the name of column on database is different
     private String description;
     private BigDecimal price;
+    private LocalDate dateRegister = LocalDate.now();
+
+    //    @Enumerated(EnumType.STRING) // => register use by string on database
+    //    private Category category;
+
+    @ManyToOne
+    private Category category;
+
+    public Product(String name, String description, BigDecimal price, Category category) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.category = category;
+    }
+
+    public Product() {
+
+    }
+
+    public LocalDate getDateRegister() {
+        return dateRegister;
+    }
+
+    public void setDateRegister(LocalDate dateRegister) {
+        this.dateRegister = dateRegister;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     public Long getId() {
         return id;
@@ -45,5 +80,10 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%d %s %s %f %s %s", this.id, this.name, this.description, this.price, this.dateRegister, this.category);
     }
 }
