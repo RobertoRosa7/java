@@ -15,6 +15,7 @@ public class Product {
     //    @Column(name = "description") // => if the name of column on database is different
     private String description;
     private BigDecimal price;
+    @Column(name = "date_register")
     private LocalDate dateRegister = LocalDate.now();
 
     //    @Enumerated(EnumType.STRING) // => register use by string on database
