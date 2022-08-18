@@ -6,6 +6,8 @@ import java.time.LocalDate;
 
 @Entity // => indicate that it is a database table
 @Table(name = "products") // => indicate that is a plural
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // => only table
+@Inheritance(strategy = InheritanceType.JOINED) // => any table
 public class Product {
 
     @Id // => indicate that is a primary key

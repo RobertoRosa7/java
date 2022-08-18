@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb590bc-8eec-45d8-bbfb-c1340010c893" name="Changes" comment="project jpa hibernate - consulta com fetch lazy">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/PersonalData.java" afterDir="false" />
+    <list default="true" id="9eb590bc-8eec-45d8-bbfb-c1340010c893" name="Changes" comment="project jpa hibernate - Embeddable">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/dao/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1660744189878</updated>
       <workItem from="1660744191080" duration="23240000" />
-      <workItem from="1660779378797" duration="3341000" />
+      <workItem from="1660779378797" duration="4128000" />
     </task>
     <task id="LOCAL-00001" summary="project jpa hibernate - file persistence added">
       <created>1660745884283</created>
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660780810294</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="project jpa hibernate - Embeddable">
+      <created>1660783410575</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660783410575</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +148,7 @@
     <MESSAGE value="project jpa hibernate - query with filter" />
     <MESSAGE value="project jpa hibernate - function aggregate" />
     <MESSAGE value="project jpa hibernate - consulta com fetch lazy" />
-    <option name="LAST_COMMIT_MESSAGE" value="project jpa hibernate - consulta com fetch lazy" />
+    <MESSAGE value="project jpa hibernate - Embeddable" />
+    <option name="LAST_COMMIT_MESSAGE" value="project jpa hibernate - Embeddable" />
   </component>
 </project>
