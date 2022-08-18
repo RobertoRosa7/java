@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb590bc-8eec-45d8-bbfb-c1340010c893" name="Changes" comment="project jpa hibernate - Embeddable">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Book.java" afterDir="false" />
+    <list default="true" id="9eb590bc-8eec-45d8-bbfb-c1340010c893" name="Changes" comment="project jpa hibernate - joined table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alura/loja/model/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1660744189878</updated>
       <workItem from="1660744191080" duration="23240000" />
-      <workItem from="1660779378797" duration="4128000" />
+      <workItem from="1660779378797" duration="4432000" />
+      <workItem from="1660785375141" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="project jpa hibernate - file persistence added">
       <created>1660745884283</created>
@@ -119,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660783410575</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="project jpa hibernate - joined table">
+      <created>1660784200452</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660784200452</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +155,7 @@
     <MESSAGE value="project jpa hibernate - function aggregate" />
     <MESSAGE value="project jpa hibernate - consulta com fetch lazy" />
     <MESSAGE value="project jpa hibernate - Embeddable" />
-    <option name="LAST_COMMIT_MESSAGE" value="project jpa hibernate - Embeddable" />
+    <MESSAGE value="project jpa hibernate - joined table" />
+    <option name="LAST_COMMIT_MESSAGE" value="project jpa hibernate - joined table" />
   </component>
 </project>
