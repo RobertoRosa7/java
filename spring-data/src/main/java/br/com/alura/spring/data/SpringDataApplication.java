@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 @SpringBootApplication
 public class SpringDataApplication implements CommandLineRunner {
+
     private final ServiceCrudCargo serviceCargo;
     private boolean system = true;
 
@@ -25,17 +26,44 @@ public class SpringDataApplication implements CommandLineRunner {
         Scanner scanner = new Scanner(System.in);
 
         while (system) {
-            System.out.println("Qual ação você quer executar?");
+            System.out.println("MENU DE OPÇÕES:\nQual ação você quer executar?");
             System.out.println("0 - Sair");
-            System.out.println("1 - Cargo");
+            System.out.println("1 - Novo Cargo");
+            System.out.println("2 - Listar todos Cargos");
+            System.out.println("3 - Atualizar Cargo");
+            System.out.println("4 - Excluir Cargo");
 
             int action = scanner.nextInt();
-            if (action == 1) {
-                this.serviceCargo.init(scanner);
-                System.out.println("Savando no banco de dados...");
-            } else {
-                this.system = false;
-                System.out.println("Não executado - fechando....");
+            switch (action) {
+                case 0: {
+                    System.out.println("Não executado - fechando....\n");
+                    this.system = false;
+                    break;
+                }
+                case 1: {
+                    System.out.println("Salvando no banco de dados...\n");
+                    this.serviceCargo.save(scanner);
+                    break;
+                }
+                case 2: {
+                    System.out.println("Buscando no banco de dados...\n");
+                    this.serviceCargo.read();
+                    break;
+                }
+                case 3: {
+                    System.out.println("Atualizando cargo no banco de dados...\n");
+                    this.serviceCargo.update(scanner);
+                    break;
+                }
+                case 4: {
+                    System.out.println("Excluindo no banco de dados...\n");
+                    this.serviceCargo.remove(scanner);
+                    break;
+                }
+                default: {
+                    System.out.println("Não executado - fechando....\n");
+                    this.system = false;
+                }
             }
         }
     }

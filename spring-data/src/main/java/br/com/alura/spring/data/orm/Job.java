@@ -1,17 +1,26 @@
 package br.com.alura.spring.data.orm;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "Cargos")
-public class ORMCargo {
-
+@Table(name = "jobs")
+public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String description;
+    private String address;
 
-    public ORMCargo() {
+    @ManyToMany(mappedBy = "job", fetch = FetchType.EAGER)
+    private List<Employee> employees;
+
+    public Job() {
+    }
+
+    public Job(String description, String address) {
+        this.description = description;
+        this.address = address;
     }
 
     public Integer getId() {
@@ -28,5 +37,13 @@ public class ORMCargo {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
