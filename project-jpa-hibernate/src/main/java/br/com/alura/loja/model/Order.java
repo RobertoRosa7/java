@@ -20,7 +20,7 @@ public class Order {
     private BigDecimal valueTotal = BigDecimal.ZERO;
     private LocalDate date = LocalDate.now();
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Client client;
 
     public Order(Client client) {

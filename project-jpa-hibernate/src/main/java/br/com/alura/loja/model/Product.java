@@ -21,7 +21,7 @@ public class Product {
     //    @Enumerated(EnumType.STRING) // => register use by string on database
     //    private Category category;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Category category;
 
     public Product(String name, String description, BigDecimal price, Category category) {

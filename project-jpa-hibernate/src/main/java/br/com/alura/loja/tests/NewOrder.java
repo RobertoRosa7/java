@@ -6,9 +6,11 @@ import br.com.alura.loja.dao.OrderDAO;
 import br.com.alura.loja.dao.ProductDAO;
 import br.com.alura.loja.model.*;
 import br.com.alura.loja.utils.Utils;
+import br.com.alura.loja.vo.SalesReport;
 
 import javax.persistence.EntityManager;
 import java.math.BigDecimal;
+import java.util.List;
 
 public class NewOrder {
 
@@ -43,6 +45,10 @@ public class NewOrder {
 
         BigDecimal valueTotal = orderdao.valueTotalSold();
         System.out.println("Total sold: " + valueTotal);
+
+        List<SalesReport> salesReports = orderdao.salesReport();
+        salesReports.forEach(System.out::println);
+
         entityManager.close();
     }
 }
