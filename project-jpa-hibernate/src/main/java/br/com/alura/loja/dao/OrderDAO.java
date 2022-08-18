@@ -15,16 +15,7 @@ public class OrderDAO {
     }
 
     public List<SalesReport> salesReport() {
-        String query = "select new br.com.alura.loja.model.SalesReport("
-                + "p.name, "
-                + "sum(i.quantity), "
-                + "max(o.date)) "
-                + "from Order as o "
-                + "join o.orderItems i "
-                + "join i.product p "
-                + "group by p.name "
-                + "order by i.quantity desc";
-
+        String query = "select new br.com.alura.loja.vo.SalesReport(" + "p.name, " + "sum(i.quantity), " + "max(o.date)) " + "from Order as o " + "join o.orderItems i " + "join i.product p " + "group by p.name " + "order by i.quantity desc";
         return this.em.createQuery(query, SalesReport.class).getResultList();
     }
 
@@ -49,14 +40,9 @@ public class OrderDAO {
         String query = "select sum(p.valueTotal) from Order as p";
         return this.em.createQuery(query, BigDecimal.class).getSingleResult();
     }
-//
-//    public List<Order> findByCategory(String name) {
-//        String query = "select p from Order as p where p.category.name = :name";
-//        return this.em.createQuery(query, Order.class).setParameter("name", name).getResultList();
-//    }
-//
-//    public BigDecimal getPriceOrderByName(String name) {
-//        String query = "select p.price from Order as p where p.name = :name";
-//        return this.em.createQuery(query, BigDecimal.class).setParameter("name", name).getSingleResult();
-//    }
+
+    public Order findOrderByClient(Long id) {
+        String query = "select o from Order as o join fetch o.client where o.id = :id";
+        return this.em.createQuery(query, Order.class).setParameter("id", id).getSingleResult();
+    }
 }

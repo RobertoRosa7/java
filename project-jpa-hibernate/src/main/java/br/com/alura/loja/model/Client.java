@@ -9,39 +9,31 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String cpf;
+    @Enumerated
+    private PersonalData personalData;
+
 
     public Client(String name, String cpf) {
-        this.name = name;
-        this.cpf = cpf;
+        this.personalData = new PersonalData(name, cpf);
     }
 
     public Client() {
 
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
-        return name;
+        return this.personalData.getName();
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.personalData.setName(name);
     }
 
     public String getCpf() {
-        return cpf;
+        return this.personalData.getCpf();
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+        this.personalData.setCpf(cpf);
     }
 }
