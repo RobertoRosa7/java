@@ -1,7 +1,12 @@
 package br.com.alura.forum.modelo;
 
-public class Curso {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "cursos")
+public class Curso {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String categoria;
@@ -9,6 +14,9 @@ public class Curso {
     public Curso(String nome, String categoria) {
         this.nome = nome;
         this.categoria = categoria;
+    }
+
+    public Curso() {
     }
 
     @Override
@@ -26,9 +34,8 @@ public class Curso {
         if (getClass() != obj.getClass()) return false;
         Curso other = (Curso) obj;
         if (id == null) {
-            if (other.id != null) return false;
-        } else if (!id.equals(other.id)) return false;
-        return true;
+            return other.id == null;
+        } else return id.equals(other.id);
     }
 
     public Long getId() {

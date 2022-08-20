@@ -1,19 +1,36 @@
 package br.com.alura.forum.modelo;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "topicos")
 public class Topico {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titulo;
     private String mensagem;
     private LocalDateTime dataCriacao = LocalDateTime.now();
+
+    @Enumerated(EnumType.STRING)
     private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
+
+    @ManyToOne
     private Usuario autor;
+
+    @ManyToOne
     private Curso curso;
+
+    @OneToMany(mappedBy = "topico")
     private List<Resposta> respostas = new ArrayList<>();
+
+
+    public Topico() {
+
+    }
 
     public Topico(String titulo, String mensagem, Curso curso) {
         this.titulo = titulo;
@@ -39,11 +56,8 @@ public class Topico {
             return false;
         Topico other = (Topico) obj;
         if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        return true;
+            return other.id == null;
+        } else return id.equals(other.id);
     }
 
     public Long getId() {
