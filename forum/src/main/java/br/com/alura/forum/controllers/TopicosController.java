@@ -8,6 +8,8 @@ import br.com.alura.forum.modelo.Topico;
 import br.com.alura.forum.repository.CursoRepository;
 import br.com.alura.forum.repository.TopicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -25,17 +27,18 @@ import java.util.Optional;
 @RequestMapping("/topicos")
 public class TopicosController {
 
+    private final String cacheListaTopicos = "TOPICO_CONTROLLER_LISTA";
     @Autowired
     private TopicoRepository topicoRepository;
-
     @Autowired
     private CursoRepository cursoRepository;
 
     @GetMapping
     @Transactional
+    @Cacheable(value = cacheListaTopicos)
     public Page<TopicoDTO> lista(
             @RequestParam(required = false) String nomeCurso,
-            @PageableDefault(sort = "dataCriacao", direction = Sort.Direction.ASC, page = 0, size = 10)
+            @PageableDefault(sort = "dataCriacao", direction = Sort.Direction.ASC)
             Pageable paginacao) {
 
         Page<Topico> topicos;
@@ -47,8 +50,17 @@ public class TopicosController {
         return TopicoDTO.converter(topicos);
     }
 
+    @GetMapping("/{id}")
+    @Transactional
+    @Cacheable(value = cacheListaTopicos)
+    public ResponseEntity<DetalhesTopicoDTO> detalhar(@PathVariable Long id) {
+        Optional<Topico> topicos = this.findAnyOne(id);
+        return topicos.map(value -> ResponseEntity.ok(new DetalhesTopicoDTO(value))).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
     @PostMapping
     @Transactional
+    @CacheEvict(value = cacheListaTopicos, allEntries = true)
     public ResponseEntity<TopicoDTO> cadastrar(@RequestBody @Valid TopicoForm form, UriComponentsBuilder builder) {
         Topico topico = form.converter(cursoRepository);
         topicoRepository.save(topico);
@@ -57,15 +69,9 @@ public class TopicosController {
         return ResponseEntity.created(uri).body(new TopicoDTO(topico));
     }
 
-    @GetMapping("/{id}")
-    @Transactional
-    public ResponseEntity<DetalhesTopicoDTO> detalhar(@PathVariable Long id) {
-        Optional<Topico> topicos = this.findAnyOne(id);
-        return topicos.map(value -> ResponseEntity.ok(new DetalhesTopicoDTO(value))).orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
     @PutMapping("/{id}")
     @Transactional
+    @CacheEvict(value = cacheListaTopicos, allEntries = true)
     public ResponseEntity<TopicoDTO> atualizar(@PathVariable Long id, @RequestBody @Valid AtualizaTopicoForm form) {
         Optional<Topico> optional = this.findAnyOne(id);
         return optional.map((topico -> ResponseEntity.ok(new TopicoDTO(form.atualizar(optional.get()))))).orElseGet(() -> ResponseEntity.notFound().build());
@@ -73,6 +79,7 @@ public class TopicosController {
 
     @DeleteMapping("/{id}")
     @Transactional
+    @CacheEvict(value = cacheListaTopicos, allEntries = true)
     public ResponseEntity<?> remove(@PathVariable Long id) {
         Optional<Topico> optional = this.findAnyOne(id);
         return optional.map(topico -> {
