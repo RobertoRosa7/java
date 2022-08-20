@@ -5,6 +5,7 @@ import br.com.alura.forum.repository.TopicoRepository;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.util.Optional;
 
 public class AtualizaTopicoForm {
     @NotNull
@@ -24,8 +25,7 @@ public class AtualizaTopicoForm {
         return mensagem;
     }
 
-    public Topico atualizar(Long id, TopicoRepository topicoRepository) {
-        Topico topico = topicoRepository.getOne(id);
+    public Topico atualizar(Topico topico) {
         topico.setTitulo(this.titulo);
         topico.setMensagem(this.mensagem);
         return topico;
