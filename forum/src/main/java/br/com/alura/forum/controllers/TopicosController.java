@@ -28,8 +28,10 @@ import java.util.Optional;
 public class TopicosController {
 
     private final String cacheListaTopicos = "TOPICO_CONTROLLER_LISTA";
+
     @Autowired
     private TopicoRepository topicoRepository;
+
     @Autowired
     private CursoRepository cursoRepository;
 
