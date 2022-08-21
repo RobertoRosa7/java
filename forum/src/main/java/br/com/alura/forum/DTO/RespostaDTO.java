@@ -5,10 +5,10 @@ import br.com.alura.forum.modelo.Resposta;
 import java.time.LocalDateTime;
 
 public class RespostaDTO {
-    private Long id;
-    private String mensagem;
-    private LocalDateTime dataCriacao;
-    private String nomeAutor;
+    private final Long id;
+    private final String mensagem;
+    private final LocalDateTime dataCriacao;
+    private final String nomeAutor;
 
     RespostaDTO(Resposta resposta) {
         this.id = resposta.getId();

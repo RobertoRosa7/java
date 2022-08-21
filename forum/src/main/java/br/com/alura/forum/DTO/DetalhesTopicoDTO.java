@@ -10,13 +10,13 @@ import java.util.stream.Collectors;
 
 public class DetalhesTopicoDTO {
 
-    private Long id;
-    private String titulo;
-    private String mensagem;
-    private LocalDateTime dataCriacao;
-    private String nomeAutor;
-    private StatusTopico status;
-    private List<RespostaDTO> respostas;
+    private final Long id;
+    private final String titulo;
+    private final String mensagem;
+    private final LocalDateTime dataCriacao;
+    private final String nomeAutor;
+    private final StatusTopico status;
+    private final List<RespostaDTO> respostas;
 
     public DetalhesTopicoDTO(Topico topico) {
         this.id = topico.getId();

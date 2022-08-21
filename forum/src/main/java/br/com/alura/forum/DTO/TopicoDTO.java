@@ -6,10 +6,10 @@ import org.springframework.data.domain.Page;
 import java.time.LocalDateTime;
 
 public class TopicoDTO {
-    private Long id;
-    private String titulo;
-    private String mensagem;
-    private LocalDateTime dataCriacao;
+    private final Long id;
+    private final String titulo;
+    private final String mensagem;
+    private final LocalDateTime dataCriacao;
 
     public TopicoDTO(Topico topico) {
         this.id = topico.getId();
