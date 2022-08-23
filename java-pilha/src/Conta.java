@@ -1,6 +1,8 @@
+
 public class Conta {
+	
+	void deposita() throws MinhaExcecao {
+		
+	}
 
-    public void deposita() {
-
-    }
 }
