@@ -8,11 +8,16 @@ import java.io.InputStreamReader;
 public class TesteLeitura {
 
     /**
-     * Stream - input stream of bytes
-     * Reader - reading character streams
+     * Stream: input stream of bytes
+     * <p>
+     * Reader: reading character streams
+     * <p>
+     * InputStreamReader extends Reader
+     * <p>
+     * BufferedReader extends Reader
      *
-     * @param args
-     * @throws IOException
+     * @param args inputs
+     * @throws IOException Exception Generic
      */
     public static void main(String[] args) throws IOException {
         FileInputStream fs = new FileInputStream("lorem.txt");
