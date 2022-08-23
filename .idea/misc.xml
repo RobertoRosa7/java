@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/forum" />
+    <file type="web" url="file://$PROJECT_DIR$/gerenciador" />
+    <file type="web" url="file://$PROJECT_DIR$/gerenciador1" />
+    <file type="web" url="file://$PROJECT_DIR$/gerenciador2" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/loja/pom.xml" />
+        <option value="$PROJECT_DIR$/forum/pom.xml" />
+        <option value="$PROJECT_DIR$/gerenciador/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data/pom.xml" />
+        <option value="$PROJECT_DIR$/gerenciador1/pom.xml" />
+        <option value="$PROJECT_DIR$/gerenciador2/pom.xml" />
+        <option value="$PROJECT_DIR$/project-mudi/pom.xml" />
+        <option value="$PROJECT_DIR$/client-service/pom.xml" />
+        <option value="$PROJECT_DIR$/project-jpa-hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/loja-virtual-repository/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
+</project>
