@@ -8,7 +8,7 @@ public class TesteEscrita2 {
         FileWriter fileWriter = new FileWriter("lorem3.txt");
 
         fileWriter.write("new file written by FileWrite lib");
-        fileWriter.write("\r\n");
+        fileWriter.write(System.lineSeparator());
         fileWriter.write("Another line written by FileWriter lib");
         fileWriter.close();
     }
