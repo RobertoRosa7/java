@@ -27,7 +27,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    public void bonusDeveriaZeroParaSalarioEgualMil() {
+    public void bonusDeveriaZeroParaSalarioIgualMil() {
         BonusService bonusService = new BonusService();
         BigDecimal bonus = bonusService.calcBonus(new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("1000")));
         assertEquals(new BigDecimal("100").setScale(2, RoundingMode.HALF_UP), bonus);
