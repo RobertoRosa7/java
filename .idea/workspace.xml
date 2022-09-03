@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="97137192-8349-47f0-a2c4-1fa052073aef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/java-lang/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lang/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lang/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lang/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lang/java-lang.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-lang/src/JavaLangApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/bin/Conexao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/bin/Conta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/bin/Fluxo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/bin/FluxoComError.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/bin/FluxoComTratamento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/bin/MinhaExcecao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/bin/TestaContaComExcecaoChecked.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/bin/TesteConexao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/src/Conexao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/src/MinhaExcecao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/src/TestaContaComExcecaoChecked.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-pilha/src/TesteConexao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-pilha/out/production/java-pilha/FluxoComError.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-pilha/out/production/java-pilha/FluxoComError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-pilha/out/production/java-pilha/FluxoComTratamento.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-pilha/out/production/java-pilha/FluxoComTratamento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-pilha/out/production/java-pilha/MinhaException.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-pilha/out/production/java-pilha/MinhaException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-pilha/src/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-pilha/src/Conta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-pilha/src/Fluxo.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-pilha/src/Fluxo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-pilha/src/FluxoComError.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-pilha/src/FluxoComError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-pilha/src/FluxoComTratamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-pilha/src/FluxoComTratamento.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2DjB7oYP5GZ0oV4VOifBTl7dhmI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/rober/Desktop/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "ec5ea76e0987554d323d8a6ccbea4282"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97137192-8349-47f0-a2c4-1fa052073aef" name="Changes" comment="" />
+      <created>1661202449180</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661202449180</updated>
+      <workItem from="1661202452195" duration="412000" />
+      <workItem from="1661278663363" duration="168000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
