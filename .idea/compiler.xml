@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="forum" />
+        <module name="loja-virtual-repository" />
+        <module name="spring-data" />
+        <module name="loja" />
+        <module name="gerenciador" />
+        <module name="gerenciador2" />
+        <module name="gerenciador1" />
+        <module name="mudi" />
+        <module name="client-service" />
+        <module name="project-jpa-hibernate" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client-service" target="18" />
+      <module name="forum" target="1.8" />
+      <module name="gerenciador" target="1.8" />
+      <module name="gerenciador1" target="1.8" />
+      <module name="gerenciador2" target="1.8" />
+      <module name="loja" target="1.7" />
+      <module name="loja-virtual-repository" target="1.8" />
+      <module name="mudi" target="1.8" />
+      <module name="project-jpa-hibernate" target="11" />
+      <module name="spring-data" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="forum" options="-parameters" />
+      <module name="mudi" options="-parameters" />
+      <module name="spring-data" options="-parameters" />
+    </option>
+  </component>
+</project>

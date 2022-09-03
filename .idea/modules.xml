@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client-service/client-service.iml" filepath="$PROJECT_DIR$/client-service/client-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/forum/forum.iml" filepath="$PROJECT_DIR$/forum/forum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gerenciador/gerenciador.iml" filepath="$PROJECT_DIR$/gerenciador/gerenciador.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gerenciador1/gerenciador1.iml" filepath="$PROJECT_DIR$/gerenciador1/gerenciador1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gerenciador2/gerenciador2.iml" filepath="$PROJECT_DIR$/gerenciador2/gerenciador2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loja/loja.iml" filepath="$PROJECT_DIR$/loja/loja.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loja-virtual-repository/loja-virtual-repository.iml" filepath="$PROJECT_DIR$/loja-virtual-repository/loja-virtual-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-mudi/mudi.iml" filepath="$PROJECT_DIR$/project-mudi/mudi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-jpa-hibernate/project-jpa-hibernate.iml" filepath="$PROJECT_DIR$/project-jpa-hibernate/project-jpa-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-data/spring-data.iml" filepath="$PROJECT_DIR$/spring-data/spring-data.iml" />
+    </modules>
+  </component>
+</project>
