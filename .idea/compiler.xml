@@ -20,22 +20,22 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="client-service" target="18" />
-      <module name="forum" target="1.8" />
+      <module name="forum" target="1.5" />
       <module name="gerenciador" target="1.8" />
       <module name="gerenciador1" target="1.8" />
       <module name="gerenciador2" target="1.8" />
       <module name="loja" target="1.7" />
       <module name="loja-virtual-repository" target="1.8" />
-      <module name="mudi" target="1.8" />
+      <module name="mudi" target="1.5" />
       <module name="project-jpa-hibernate" target="11" />
-      <module name="spring-data" target="1.8" />
+      <module name="spring-data" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="forum" options="-parameters" />
-      <module name="mudi" options="-parameters" />
-      <module name="spring-data" options="-parameters" />
+      <module name="forum" options="" />
+      <module name="mudi" options="" />
+      <module name="spring-data" options="" />
     </option>
   </component>
 </project>
